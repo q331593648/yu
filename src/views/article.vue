@@ -7,52 +7,50 @@
             </el-breadcrumb>
         </div>
         <el-row>
-            <el-col :span="18" class="titleHeader" >
+            <el-col :span="20" class="titleHeader" >
                 <p>{{list.periodicalName}}</p>
-               
-            <el-row>
-            <el-col :span="12">
-                <ul>
-                    <li>
-                        <span class="artName">杂志名称：</span>
-                        <span>{{list.periodicalName}}</span>
-                    </li>
-                    <li>
-                        <span class="artName">主管单位：</span>
-                        <span>{{list.competentAuthority}}</span>
-                    </li>
-                    <li>
-                        <span class="artName">主办单位：</span>
-                        <span>{{list.sponsoredBy}}</span>
-                    </li>
-                    <li>
-                        <span class="artName">周期：</span>
-                        <span>{{list.cycle}}</span>
-                    </li>
-                    <li>
-                        <span class="artName">国际刊号：</span>
-                        <span>{{list.issn}}</span>
-                    </li>
-                    <li>
-                        <span class="artName">国内刊号：</span>
-                        <span>{{list.cn}}</span>
-                    </li>
-                    <li>
-                        <span class="artName">杂志级别：</span>
-                        <span>{{list.periodicalLevel}}</span>
-                    </li>
-                </ul>
+                <el-row>
+                    <el-col :span="12">
+                            <ul>
+                                <li>
+                                    <span class="artName">杂志名称：</span>
+                                    <span>{{list.periodicalName}}</span>
+                                </li>
+                                <li>
+                                    <span class="artName">主管单位：</span>
+                                    <span>{{list.competentAuthority}}</span>
+                                </li>
+                                <li>
+                                    <span class="artName">主办单位：</span>
+                                    <span>{{list.sponsoredBy}}</span>
+                                </li>
+                                <li>
+                                    <span class="artName">周期：</span>
+                                    <span>{{list.cycle}}</span>
+                                </li>
+                                <li>
+                                    <span class="artName">国际刊号：</span>
+                                    <span>{{list.issn}}</span>
+                                </li>
+                                <li>
+                                    <span class="artName">国内刊号：</span>
+                                    <span>{{list.cn}}</span>
+                                </li>
+                                <li>
+                                    <span class="artName">杂志级别：</span>
+                                    <span>{{list.periodicalLevel}}</span>
+                                </li>
+                            </ul>
+                    </el-col>
+                    <el-col :span="12" style="text-align: center;">
+                        <img :src="require(`./../assets/image/${list.articleId}.jpg`)" >
+                    </el-col>
+                </el-row>
             </el-col>
-            <el-col :span="12" style="text-align: center;">
-                <img :src="require(`./../assets/image/${list.articleId}.jpg`)" >
-            </el-col>
-        </el-row>
-            </el-col>
-            <el-col :span="6">
+            <el-col :span="4">
                 <rightSide></rightSide>
             </el-col>
         </el-row>
-        
     </div>
 </template>
 
@@ -89,7 +87,6 @@ export default {
 .article{
     padding: 20px;
     .titleHeader{
-        height: 30px;
         line-height: 30px;
         text-align: left;
         font-weight: bold;

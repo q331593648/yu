@@ -8,7 +8,8 @@
                 </li>
               </ul>
           </el-row>
-           <a href="../../static/2018年中国科技核心期刊目录（自然科学卷）.rar" target="_blank">12312</a>
+          
+<a :href="url1" class="sel_btn" download>点击下载人员画像评价办法</a>
   </div>
 </template>
 
@@ -27,6 +28,7 @@ export default {
         {articalId:7,name:'新闻出版总署',url:"http://www.sapprft.gov.cn/"},
         {articalId:8,name:'中国科学技术信息研究所',url:"http://www.istic.ac.cn/"},
       ],
+      url1:"../../static/2018年中国科技核心期刊目录（自然科学卷）.pdf"
     }
   },
   mounted(){
@@ -40,8 +42,9 @@ export default {
   methods:{
      faqJump(e,type){
        if(e == 1){
+         debugger;
       //  window.location.href = window.location + "download/rawData.csv";
-       window.open("../../static/2018年中国科技核心期刊目录（自然科学卷）.rar","open");
+      //  window.open("../../static/2018年中国科技核心期刊目录（自然科学卷）.rar","open");
        }else if(e == 2){
         window.open("../../static/2014版医学中文核心期刊目录.rar","open");
        }else if(e == 3){
