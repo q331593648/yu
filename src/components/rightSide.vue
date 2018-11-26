@@ -8,6 +8,7 @@
                 </li>
               </ul>
           </el-row>
+           <a href="../../static/2018年中国科技核心期刊目录（自然科学卷）.rar" target="_blank">12312</a>
   </div>
 </template>
 
@@ -37,14 +38,14 @@ export default {
     })
   },
   methods:{
-     jump(e,type){
-       if(item.url == 1){
-         debugger;
-       window.location.href = window.location + "download/rawData.csv";
-       }else if(item.url == 2){
-
-       }else if(item.url == 3){
-
+     faqJump(e,type){
+       if(e == 1){
+      //  window.location.href = window.location + "download/rawData.csv";
+       window.open("../../static/2018年中国科技核心期刊目录（自然科学卷）.rar","open");
+       }else if(e == 2){
+        window.open("../../static/2014版医学中文核心期刊目录.rar","open");
+       }else if(e == 3){
+        window.open("../../static/2017-2018年度CSCD期刊列表.rar","open");
        }else{
         window.open(this.$router.resolve({ path: '/article',query: {id: e} }).href, '_blank');
        }
