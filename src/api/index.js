@@ -5,7 +5,7 @@ import Axios from 'axios'
 Axios.defaults.headers = {
 'Content-Type': 'application/json;charset=UTF-8'
 }
-const baseUrl = "http://localhost/getData.php?rout=";
+const baseUrl = "http://tbh9364801.y617irm.cstack152.542b.top/getData.php?rout=";
 export const searchAll  = () => { //获取搜索结果请求
   return Axios({
       url: baseUrl + "getArticleAll",

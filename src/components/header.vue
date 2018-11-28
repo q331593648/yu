@@ -1,8 +1,10 @@
 <template>
     <div class="header">
         <el-row  class="nav-header">
-            <el-col :span="8">百事帮医学网</el-col>
-            <el-col :span="8">
+            <el-col :span="8" >
+                <img :src="require(`./../assets/logo.jpg`)" alt="百事帮" width="120">
+            </el-col>
+            <el-col :span="8" style="margin-top:10px">
                 <el-input
                     placeholder="请输入内容"
                     v-model.trim="searchKey"
@@ -10,7 +12,7 @@
                     <i slot="suffix" class="el-input__icon el-icon-search" @click="search"></i>
                 </el-input>
             </el-col>
-            <el-col :span="8" class="tel">
+            <el-col :span="8" class="tel" style="margin-top:10px">
                 <span>咨询热线：</span>
                 <span class="phone">152-6700-3953</span>
             </el-col>
@@ -72,11 +74,6 @@ export default {
 }
 </script>
 
-<style>
-.header .el-input{
-    width: 400px;
-}
-</style>
 
 <style lang="scss" scoped>
 .nav .el-col{
@@ -90,8 +87,11 @@ export default {
     }
 }
 .nav-header{
-    margin: 20px 0;
     line-height: 40px;
+    img{
+        position: relative;
+        top: 10px
+    }
 }
 .active{
     background: #0baee4!important;
